@@ -529,6 +529,38 @@
 <div id="canvas-container"></div>
 <div id="scanlines"></div>
 
+<!-- ── Back to Landing ── -->
+<a href="landing.html" id="back-btn" title="Back to Landing">
+  <svg width="13" height="13" viewBox="0 0 12 12" fill="none">
+    <path d="M10 6H2M6 2L2 6l4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+<style>
+  #back-btn {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    color: rgba(0,255,204,0.4);
+    background: transparent;
+    border: 1px solid rgba(0,255,204,0.12);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  #back-btn svg { opacity: 0.4; transition: opacity 0.2s; }
+  #back-btn:hover {
+    color: #00ffcc;
+    border-color: rgba(0,255,204,0.45);
+  }
+  #back-btn:hover svg { opacity: 1; }
+</style>
+
 <div id="hud">
   <div id="title-bar">
     <h1>QUANTUM TUNNELING</h1>
