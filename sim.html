@@ -2698,6 +2698,11 @@ window.toggleSheet = toggleSheet;
 sheetInit();
 requestAnimationFrame(() => { requestAnimationFrame(sheetInit); });
 
+// Force closed after full load (catches Android timing issues)
+window.addEventListener('load', () => {
+  setTimeout(() => { sheetInit(); sheetSetOpen(false, false); }, 100);
+});
+
 // Re-init on resize / orientation change
 window.addEventListener('resize', () => {
   const wasOpen = sheetOpen;
